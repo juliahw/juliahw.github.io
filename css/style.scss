@@ -1,0 +1,389 @@
+// ============================================================================
+// Julia's Stylin'
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Configuration
+// ----------------------------------------------------------------------------
+
+$peach: #ffd7a1;
+$pink: #eb8c66;
+$magenta: #b86263;
+$blue: #97ceb6;
+$green: #97c197;
+$brown: #c0a493;
+$white: #ffffff;
+$grey: #999999;
+
+$button-floating-size: 37px;
+$icon-font-size: 2.4rem;
+
+// ----------------------------------------------------------------------------
+// Mixins
+// ----------------------------------------------------------------------------
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} { @content; }
+  @-moz-keyframes #{$animation-name} { @content; }
+  @-ms-keyframes #{$animation-name} { @content; }
+  @-o-keyframes #{$animation-name} { @content; }
+  @keyframes #{$animation-name} { @content; }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+// ----------------------------------------------------------------------------
+// General
+// ----------------------------------------------------------------------------
+
+body {
+  font-family: "brandon-grotesque", sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+  font-size: 12pt;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.logo-block {
+  @extend .fade-on-hover;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-bottom-right-radius: 10px;
+
+  .logo {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-size: $icon-font-size;
+  }
+}
+
+.number-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  font-size: 14pt;
+  z-index: 998;
+
+  li {
+    padding: 5px 10px;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Home
+// ----------------------------------------------------------------------------
+
+.island {
+  img {
+    position: absolute;
+
+    &:last-of-type {
+      position: relative;
+    }
+  }
+}
+
+.menu-links {
+
+  .btn-floating {
+    margin: 0 10px;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Design
+// ----------------------------------------------------------------------------
+
+.image-display-container {
+  padding-bottom: 50px;
+}
+
+// ----------------------------------------------------------------------------
+// Code
+// ----------------------------------------------------------------------------
+
+.img-web {
+  border: 2px solid $grey;
+  border-top-width: 20px;
+  margin: 2em 0;
+}
+
+.img-web-overlay {
+  display: block;
+  position: relative;
+  margin: 2em 0;
+
+  img {
+    position: relative;
+    border: 2px solid $grey;
+    border-top-width: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &.fade-out {
+      opacity: 0.2;
+    }
+  }
+
+  .overlay {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Typography
+// ----------------------------------------------------------------------------
+
+.text-peach { color: $peach; }
+.text-pink { color: $pink; }
+.text-magenta { color: $magenta; }
+.text-blue { color: $blue; }
+.text-green { color: $green; }
+.text-brown { color: $brown; }
+.text-white { color: $white; }
+.text-grey { color: $grey; }
+
+.text-spaced { letter-spacing: 10px; }
+
+h3, h4, h6 {
+  margin: 0;
+  padding: 2px 0;
+}
+
+p {
+  color: $pink;
+  text-indent: 20px;
+
+  &.no-indent {
+    text-indent: 0px;
+  }
+}
+
+a {
+  color: $peach;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover,
+  &:active {
+    color: $pink;
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+// ----------------------------------------------------------------------------
+// Layout
+// ----------------------------------------------------------------------------
+
+.va-middle {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.space-1 {
+  margin-bottom: 1.5rem;
+}
+
+.space-2 {
+  margin-bottom: 3rem;
+}
+
+.space-3 {
+  margin-bottom: 4.5rem;
+}
+
+// ----------------------------------------------------------------------------
+// Visibility
+// ----------------------------------------------------------------------------
+
+.hide { display: none; }
+
+.fade-on-hover {
+  transition: .3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Backgrounds
+// ----------------------------------------------------------------------------
+
+.bg-peach { background-color: $peach; }
+.bg-pink { background-color: $pink; }
+.bg-magenta { background-color: $magenta; }
+.bg-blue { background-color: $blue; }
+.bg-green { background-color: $green; }
+.bg-grey { background-color: $grey; }
+
+// ----------------------------------------------------------------------------
+// Buttons
+// ----------------------------------------------------------------------------
+
+.btn {
+  @extend .fade-on-hover;
+  color: $white;
+  border: none;
+  border-radius: 0;
+  margin-right: 10px;
+  height: 40px;
+  vertical-align: middle;
+
+  h4 {
+    padding: 5px;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn-floating {
+  @extend .fade-on-hover;
+  display: inline-block;
+  width: $button-floating-size;
+  height: $button-floating-size;
+  border-radius: 50%;
+  cursor: pointer;
+
+  i {
+    color: $white;
+    display: inline-block;
+    width: inherit;
+    text-align: center;
+    font-size: $icon-font-size;
+    line-height: $button-floating-size;
+  }
+
+  &:before {
+    border-radius: 0;
+  }
+
+  &.btn-large {
+    width: $button-floating-size * 1.5;
+    height: $button-floating-size * 1.5;
+    i{
+      line-height: $button-floating-size * 1.5;
+    }
+  }
+}
+
+.fixed-action-btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 998;
+
+  ul {
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 64px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Animations
+// ----------------------------------------------------------------------------
+
+@include keyframes(hover) {
+  0% {
+    transform: translate3d(0, 10px, 0px);
+    -webkit-transform: translate3d(0, 10px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translate3d(0, -10px, 0px);
+    -webkit-transform: translate3d(0, -10px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate3d(0, 10px, 0px);
+    -webkit-transform: translate3d(0, 10px, 0px);
+  }
+}
+
+@include keyframes(hover2) {
+  0% {
+    transform: translate3d(0, -15px, 0px);
+    -webkit-transform: translate3d(0, -15px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translate3d(0, 5px, 0px);
+    -webkit-transform: translate3d(0, 5px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate3d(0, -15px, 0px);
+    -webkit-transform: translate3d(0, -15px, 0px);
+  }
+}
+
+@include keyframes(hover3) {
+  0% {
+    transform: translate3d(0, -10px, 0px);
+    -webkit-transform: translate3d(0, -10px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translate3d(0, 5px, 0px);
+    -webkit-transform: translate3d(0, 5px, 0px);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate3d(0, -10px, 0px);
+    -webkit-transform: translate3d(0, -10px, 0px);
+  }
+}
+
+@include keyframes(fade-in) {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hover { @include animation('hover 4s infinite'); }
+.hover2 { @include animation('hover2 10s infinite'); }
+.hover3 { @include animation('hover3 10s infinite'); }
+.fade-in { @include animation('fade-in 0.5s'); }
