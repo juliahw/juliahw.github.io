@@ -43,8 +43,6 @@ class DesignPt2 extends React.Component {
           description='A quick study in a one-color palette.'
           software="Adobe Photoshop"
         />
-
-        <NextButton onClick={() => {actions.setPageSet('code')}} />
       </div>
     );
   }

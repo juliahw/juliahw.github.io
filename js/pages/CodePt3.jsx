@@ -45,8 +45,6 @@ class CodePt3 extends React.Component {
             For a more in-depth description of the project and implementation, check out my <a href="img/ihe.pdf" target="_blank">final project report</a>.
           </p>
         </div>
-
-        <NextButton onClick={() => {actions.setPageSet('food')}} />
       </div>
     );
   }
