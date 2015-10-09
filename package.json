@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Julia's dashing website.",
   "scripts": {
-    "clean": "rm -rf public .sass-cache",
+    "clean": "rm -rf public .sass-cache *~ *.log",
     "clobber": "rm -rf public .sass-cache node_modules",
     "build": "mkdir public && mkdir public/javascripts && browserify js/index.js -t babelify -o public/javascripts/bundle.js && sass --update css:public/stylesheets",
     "watch": "mkdir public && mkdir public/javascripts && watchify js/index.js -t babelify -o public/javascripts/bundle.js & sass --watch css:public/stylesheets",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "alt": "0.17.1",
+    "classnames": "^2.1.5",
     "react": "0.13.3"
   },
   "devDependencies": {
