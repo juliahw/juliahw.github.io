@@ -4,7 +4,6 @@ const actions = alt.createActions(class PageActions {
 
   constructor() {
     this.generateActions(
-      'setFabHoverState',
       'setPageSet',
       'setPageIndex',
       'nextPage',

@@ -5,15 +5,8 @@ export default alt.createStore(class PageStore {
 
   constructor() {
     this.bindActions(actions);
-
-    this.fabHoverState = '';
-
     this.pageSet = 'home';
     this.pageIndex = 0;
-  }
-
-  setFabHoverState(state) {
-    this.fabHoverState = state;
   }
 
   // Set the current set of pages (and set index to 0 for safety)

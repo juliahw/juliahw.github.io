@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 class Fab extends React.Component {
 
@@ -6,7 +7,7 @@ class Fab extends React.Component {
     return (
       <div className="fixed-action-btn">
         <a className="btn-floating btn-large bg-blue" onClick={this.props.onClick}>
-          <i className={`icon ${this.props.iconClass}`} />
+          <i className={ cx('icon', this.props.iconClass) } />
         </a>
       </div>
     );

@@ -20,24 +20,6 @@ class About extends React.Component {
             </p>
           </div>
         </div>
-
-        <div className="row text-center menu-links">
-          <a className="btn-floating bg-blue" href="img/juliawangcv.pdf" target="_blank">
-            <i className="icon ion-document-text" />
-          </a>
-
-          <a className="btn-floating bg-blue" href="//linkedin.com/in/juliahw" target="_blank">
-            <i className="icon ion-social-linkedin" />
-          </a>
-
-          <a className="btn-floating bg-blue" href="//github.com/juliahw" target="_blank">
-            <i className="icon ion-social-octocat" />
-          </a>
-
-          <a className="btn-floating bg-blue" href="//juliaspies.me" target="_blank">
-            <i className="icon ion-happy" />
-          </a>
-        </div>
       </div>
     );
   }
