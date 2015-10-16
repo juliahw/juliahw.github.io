@@ -724,23 +724,18 @@ var _pagesFoodPt2Jsx2 = _interopRequireDefault(_pagesFoodPt2Jsx);
 
 var PAGE_SETS = {
   home: {
-    iconClass: 'ion-earth',
     pages: [_react2['default'].createElement(_pagesHomeJsx2['default'], null)]
   },
   about: {
-    iconClass: 'ion-happy-outline',
     pages: [_react2['default'].createElement(_pagesAboutJsx2['default'], null)]
   },
   design: {
-    iconClass: 'ion-ios-flower',
     pages: [_react2['default'].createElement(_pagesDesignJsx2['default'], null), _react2['default'].createElement(_pagesDesignPt1Jsx2['default'], null), _react2['default'].createElement(_pagesDesignPt2Jsx2['default'], null)]
   },
   code: {
-    iconClass: 'ion-code-working',
     pages: [_react2['default'].createElement(_pagesCodeJsx2['default'], null), _react2['default'].createElement(_pagesCodePt1Jsx2['default'], null), _react2['default'].createElement(_pagesCodePt2Jsx2['default'], null), _react2['default'].createElement(_pagesCodePt3Jsx2['default'], null)]
   },
   food: {
-    iconClass: 'ion-fork',
     pages: [_react2['default'].createElement(_pagesFoodJsx2['default'], null), _react2['default'].createElement(_pagesFoodPt1Jsx2['default'], null), _react2['default'].createElement(_pagesFoodPt2Jsx2['default'], null)]
   }
 };
