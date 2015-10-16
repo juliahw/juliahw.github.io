@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Julia's dashing website.",
   "scripts": {
-    "clean": "rm -rf public .sass-cache *~ *.log",
-    "clobber": "rm -rf public .sass-cache node_modules",
-    "build": "mkdir public && mkdir public/javascripts && browserify js/index.js -t babelify -o public/javascripts/bundle.js && sass --update css:public/stylesheets",
-    "watch": "mkdir public && mkdir public/javascripts && watchify js/index.js -t babelify -o public/javascripts/bundle.js & sass --watch css:public/stylesheets",
-    "serve": "python -m SimpleHTTPServer"
+    "clean": "rm -rf public/javascripts/* public/stylesheets/* .sass-cache *~ *.log",
+    "buildjs": "browserify js/index.js -t babelify -o public/javascripts/bundle.js",
+    "watchjs": "watchify js/index.js -t babelify -o public/javascripts/bundle.js",
+    "buildcss": "sass --update css:public/stylesheets",
+    "watchcss": "sass --watch css:public/stylesheets",
+    "build": "npm run buildjs && npm run buildcss",
+    "watch": "npm run watchjs & npm run watchcss",
+    "start": "npm run watch & python -m SimpleHTTPServer"
   },
   "author": "Julia Wang",
   "license": "ISC",
