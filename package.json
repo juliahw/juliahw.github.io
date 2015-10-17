@@ -10,7 +10,7 @@
     "watchcss": "sass --watch css:public/stylesheets",
     "build": "npm run buildjs && npm run buildcss",
     "watch": "npm run watchjs & npm run watchcss",
-    "start": "npm run watch & python -m SimpleHTTPServer"
+    "dev": "npm run watch & python -m SimpleHTTPServer"
   },
   "author": "Julia Wang",
   "license": "ISC",
