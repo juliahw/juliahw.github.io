@@ -1082,7 +1082,7 @@ var CodePt2 = (function (_React$Component) {
               { href: '//angularjs.org', target: '_blank' },
               'Angular'
             ),
-            '. Using Ionic speeded up our workflow significantly, as it gave us multi-platform functionality and built-in components for free.'
+            '. I found the Angular learning curve to be a little steep, and its controller logic to be quite messy; I probably won’t use it again for a future project. Still, using Ionic speeded up our workflow significantly, as it gave us multi-platform functionality and several built-in components and utilities for free.'
           ),
           _react2['default'].createElement(
             'p',
@@ -1093,7 +1093,7 @@ var CodePt2 = (function (_React$Component) {
           _react2['default'].createElement(
             'p',
             null,
-            'The interface underwent many iterations. After performing usability testing, I ended up implementing many new features that provided extra assurance to the user. These included autocomplete, descriptive colors indicating route safety, and infographics displaying more detailed security data.'
+            'The interface underwent many iterations. After performing usability testing, I ended up implementing many new features that provided extra assurance to the user. These included autocomplete, a larger range of descriptive colors indicating route safety, and infographics displaying more detailed security data.'
           ),
           _react2['default'].createElement(
             'div',
@@ -1112,7 +1112,7 @@ var CodePt2 = (function (_React$Component) {
           _react2['default'].createElement(
             'p',
             null,
-            'In addition to the working on the app itself, I created a small product website to go with our presentation deck:'
+            'Besides my work on the app itself, I also created a product website to go with our presentation deck:'
           ),
           _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/walkmeweb.jpg', href: '//princeton.edu/~eyli/wm' })
         ),
