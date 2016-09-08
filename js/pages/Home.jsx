@@ -8,17 +8,17 @@ class Home extends React.Component {
     return (
       <div className="fade-in" id="home-wrapper">
         <div className="external-links row text-center">
-          <a href="//github.com/juliahw" target="_blank">
-            <i className="ion-social-octocat" />
-          </a>
           <a href="img/juliawangcv.pdf" target="_blank">
-            <i className="ion-paper-airplane" />
-          </a>
-          <a href="//linkedin.com/in/juliahw" target="_blank">
-            <i className="ion-social-linkedin" />
+            <i className="ion-clipboard" />
           </a>
           <a href="mailto:juliahw@princeton.edu" target="_top">
-            <i className="ion-at" />
+            <i className="ion-paper-airplane" />
+          </a>
+          <a href="//github.com/juliahw" target="_blank">
+            <i className="ion-social-github" />
+          </a>
+          <a href="//linkedin.com/in/juliahw" target="_blank">
+            <i className="ion-social-linkedin-outline" />
           </a>
         </div>
 
