@@ -1,22 +1,20 @@
 import React from 'react';
-import Fab from './Fab.jsx';
-
-import actions from '../actions/PageActions';
+import { Link } from 'react-router';
 
 class NextButton extends React.Component {
 
   render() {
-    return <Fab iconClass="ion-ios-arrow-thin-right" onClick={this.props.onClick} />;
+    return (
+      <Link to={this.props.to}>
+        <div className="fixed-action-btn">
+          <div className="btn-floating btn-large bg-blue">
+            <i className="icon ion-arrow-right-c" />
+          </div>
+        </div>
+      </Link>
+    );
   }
 
 }
-
-NextButton.propTypes = {
-  onClick: React.PropTypes.func
-};
-
-NextButton.defaultProps = {
-  onClick: actions.nextPage
-};
 
 export default NextButton;

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import actions from '../actions/PageActions';
+import { Link } from 'react-router';
 
 class Code extends React.Component {
 
@@ -24,9 +23,9 @@ class Code extends React.Component {
         </div>
 
         <div className="row text-center">
-          <a className="btn bg-blue" onClick={actions.nextPage}>
+          <Link className="btn bg-blue" to="/code/1">
             <h4 className="text-uppercase">Explore</h4>
-          </a>
+          </Link>
         </div>
       </div>
     );

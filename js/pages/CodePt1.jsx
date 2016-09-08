@@ -32,7 +32,7 @@ class CodePt1 extends React.Component {
           <WebImageDisplay src="img/juliaspiesnew.png" href="//juliaspies.me"/>
         </div>
 
-        <NextButton />
+        <NextButton to="/code/2" />
       </div>
     );
   }

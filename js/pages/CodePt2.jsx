@@ -39,7 +39,7 @@ class CodePt2 extends React.Component {
           <WebImageDisplay src="img/walkmeweb.jpg" href="//princeton.edu/~eyli/wm"/>
         </div>
 
-        <NextButton />
+        <NextButton to="/code/3" />
       </div>
     );
   }

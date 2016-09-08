@@ -1,6 +1,5 @@
 import React from 'react';
-
-import actions from '../actions/PageActions';
+import { Link } from 'react-router';
 
 class Home extends React.Component {
 
@@ -27,18 +26,17 @@ class Home extends React.Component {
         </h1>
 
         <div className="nav-links row space-2 text-center text-spaced">
-          <a
-            className="visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
-            onClick={() => {actions.setPageSet('about')}}
-          >
+          <Link to="/about">
             <em>about</em>
-          </a>
-          <span className="hidden-xs">&nbsp;&middot;&nbsp;</span>
-          <a onClick={() => {actions.setPageSet('design')}}><em>design</em></a>
+          </Link>
           <span>&nbsp;&middot;&nbsp;</span>
-          <a onClick={() => {actions.setPageSet('code')}}><em>code</em></a>
+          <Link to="/design">
+            <em>design</em>
+          </Link>
           <span>&nbsp;&middot;&nbsp;</span>
-          <a onClick={() => {actions.setPageSet('food')}}><em>food</em></a>
+          <Link to="/code">
+            <em>code</em>
+          </Link>
         </div>
 
         <div className="island row">

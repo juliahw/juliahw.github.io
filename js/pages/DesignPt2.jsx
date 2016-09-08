@@ -2,8 +2,6 @@ import React from 'react';
 import ImageDisplay from '../components/ImageDisplay.jsx';
 import NextButton from '../components/NextButton.jsx';
 
-import actions from '../actions/PageActions';
-
 class DesignPt2 extends React.Component {
 
   render() {

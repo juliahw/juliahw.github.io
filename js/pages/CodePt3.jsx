@@ -2,8 +2,6 @@ import React from 'react';
 import WebImageDisplay from '../components/WebImageDisplay.jsx';
 import NextButton from '../components/NextButton.jsx';
 
-import actions from '../actions/PageActions';
-
 class CodePt3 extends React.Component {
 
   render() {

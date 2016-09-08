@@ -62,7 +62,7 @@ class DesignPt1 extends React.Component {
           software="Adobe Illustrator"
         />
 
-        <NextButton />
+        <NextButton to="/design/2" />
       </div>
     );
   }

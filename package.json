@@ -17,7 +17,9 @@
   "dependencies": {
     "alt": "0.17.1",
     "classnames": "^2.1.5",
-    "react": "0.13.3"
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0"
   },
   "devDependencies": {
     "babelify": "6.1.3"
