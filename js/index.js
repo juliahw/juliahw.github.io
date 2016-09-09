@@ -15,8 +15,18 @@ import CodePt1 from './pages/CodePt1.jsx';
 import CodePt2 from './pages/CodePt2.jsx';
 import CodePt3 from './pages/CodePt3.jsx';
 
+function handleUpdate() {
+  let {
+    action
+  } = this.state.location;
+
+  if (action === 'PUSH') {
+    window.scrollTo(0, 0);
+  }
+}
+
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={hashHistory} onUpdate={handleUpdate}>
     <Route path="/" component={Index}>
       <IndexRoute component={Home} />
       <Route path="about" component={About} />
