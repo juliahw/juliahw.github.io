@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Button from '../components/Button.jsx';
 
 class Code extends React.Component {

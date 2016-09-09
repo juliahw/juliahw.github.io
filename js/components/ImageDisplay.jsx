@@ -1,7 +1,5 @@
 import React from 'react';
 
-import actions from '../actions/PageActions';
-
 class ImageDisplay extends React.Component {
 
   render() {
