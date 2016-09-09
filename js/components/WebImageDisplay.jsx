@@ -23,14 +23,13 @@ class WebImageDisplay extends React.Component {
   render() {
 
     const overlay = this.state.hover ? (
-      <div>
+      <div className="overlay">
         <a
-          className="overlay btn-floating btn-large bg-grey"
           href={this.props.href}
           onMouseEnter={this.onMouseEnter}
           target="_blank"
         >
-          <i className="ion-android-open" />
+          <i className="ion-link" />
         </a>
       </div>
     ) : null;

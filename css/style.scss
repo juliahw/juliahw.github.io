@@ -126,8 +126,7 @@ img {
 // ----------------------------------------------------------------------------
 
 .img-web {
-  border: 2px solid $gray;
-  border-top-width: 20px;
+  border: 5px solid $gray;
   margin: 2em 0;
 }
 
@@ -138,23 +137,40 @@ img {
 
   img {
     position: relative;
-    border: 2px solid $gray;
-    border-top-width: 20px;
+    border: 5px solid $blue;
     transition: 0.3s;
-    cursor: pointer;
 
     &.fade-out {
-      opacity: 0.2;
+      opacity: 0.5;
     }
   }
 
   .overlay {
+    cursor: pointer;
     z-index: 2;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: $white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 5px solid $blue;
+
+    a {
+      position: relative;
+      top: 27px;
+      font-size: 2em;
+    }
+
+    &:hover {
+      a {
+        opacity: 0.5;
+      }
+    }
   }
 }
 
@@ -274,6 +290,7 @@ a {
 .bg-pink { background-color: $pink; }
 .bg-blue { background-color: $blue; }
 .bg-green { background-color: $green; }
+.bg-gray { background-color: $gray; }
 
 // ----------------------------------------------------------------------------
 // Buttons

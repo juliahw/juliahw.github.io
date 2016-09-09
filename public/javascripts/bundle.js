@@ -229,16 +229,15 @@ var WebImageDisplay = (function (_React$Component) {
 
       var overlay = this.state.hover ? _react2["default"].createElement(
         "div",
-        null,
+        { className: "overlay" },
         _react2["default"].createElement(
           "a",
           {
-            className: "overlay btn-floating btn-large bg-grey",
             href: this.props.href,
             onMouseEnter: this.onMouseEnter,
             target: "_blank"
           },
-          _react2["default"].createElement("i", { className: "ion-android-open" })
+          _react2["default"].createElement("i", { className: "ion-link" })
         )
       ) : null;
 
