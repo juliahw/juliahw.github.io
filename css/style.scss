@@ -12,12 +12,9 @@ $magenta: #b86263;
 $blue: #97ceb6;
 $green: #97c197;
 $brown: #c0a493;
-// $white: #fffaf1;
 $white: #fff;
-$grey: #999999;
 $gray: #7F7F7F;
 
-$button-floating-size: 37px;
 $icon-font-size: 2.4rem;
 
 @font-face {
@@ -56,7 +53,6 @@ $icon-font-size: 2.4rem;
 // ----------------------------------------------------------------------------
 
 body {
-  // font-family: "brandon-grotesque", sans-serif;
   font-family: "League Spartan", sans-serif;
   font-size: 12pt;
   color: $gray;
@@ -84,19 +80,6 @@ img {
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     font-size: $icon-font-size;
-  }
-}
-
-.number-nav {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  font-size: 14pt;
-  z-index: 998;
-
-  li {
-    padding: 5px 10px;
   }
 }
 
@@ -143,7 +126,7 @@ img {
 // ----------------------------------------------------------------------------
 
 .img-web {
-  border: 2px solid $grey;
+  border: 2px solid $gray;
   border-top-width: 20px;
   margin: 2em 0;
 }
@@ -155,7 +138,7 @@ img {
 
   img {
     position: relative;
-    border: 2px solid $grey;
+    border: 2px solid $gray;
     border-top-width: 20px;
     transition: 0.3s;
     cursor: pointer;
@@ -184,9 +167,7 @@ img {
 .text-magenta { color: $magenta; }
 .text-blue { color: $blue; }
 .text-green { color: $green; }
-.text-brown { color: $brown; }
 .text-white { color: $white; }
-.text-grey { color: $grey; }
 .text-gray { color: $gray; }
 
 h1 {
@@ -234,24 +215,19 @@ p {
 }
 
 a {
+  @extend .fade-on-hover;
   color: $blue;
   cursor: pointer;
-  transition: .3s;
 
   &:hover,
   &:active {
     color: $blue;
-    opacity: 0.7;
     text-decoration: none;
   }
 
   &:visited {
     text-decoration: none;
   }
-}
-
-ul {
-  list-style-type: none;
 }
 
 // ----------------------------------------------------------------------------
@@ -286,7 +262,7 @@ ul {
   transition: .3s;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
@@ -296,10 +272,8 @@ ul {
 
 .bg-peach { background-color: $peach; }
 .bg-pink { background-color: $pink; }
-.bg-magenta { background-color: $magenta; }
 .bg-blue { background-color: $blue; }
 .bg-green { background-color: $green; }
-.bg-grey { background-color: $grey; }
 
 // ----------------------------------------------------------------------------
 // Buttons
@@ -319,59 +293,6 @@ ul {
 
   &:hover {
     color: $white;
-  }
-}
-
-.btn-floating {
-  @extend .fade-on-hover;
-  display: inline-block;
-  width: $button-floating-size;
-  height: $button-floating-size;
-  border-radius: 50%;
-  cursor: pointer;
-
-  i {
-    color: $white;
-    display: inline-block;
-    width: inherit;
-    text-align: center;
-    font-size: $icon-font-size;
-    line-height: $button-floating-size;
-  }
-
-  &:before {
-    border-radius: 0;
-  }
-
-  &.btn-large {
-    width: $button-floating-size * 1.5;
-    height: $button-floating-size * 1.5;
-    i{
-      line-height: $button-floating-size * 1.5;
-    }
-  }
-}
-
-.fixed-action-btn {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  padding-top: 15px;
-  margin-bottom: 0;
-  z-index: 998;
-
-  ul {
-    left: 0;
-    right: 0;
-    text-align: center;
-    bottom: 64px;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 15px;
-    }
   }
 }
 
