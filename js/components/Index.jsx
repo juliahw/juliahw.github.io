@@ -8,7 +8,7 @@ class Index extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <Link to="/">
-            <div className="col-md-offset-1 bg-magenta logo-block text-center">
+            <div className="col-md-offset-1 bg-blue logo-block text-center">
               <i className="logo text-white ion-ios-home" />
             </div>
           </Link>

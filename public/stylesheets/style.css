@@ -1,9 +1,15 @@
+@font-face {
+  font-family: 'League Spartan';
+  src: url("/lib/fonts/leaguespartan-bold.eot");
+  src: url("/lib/fonts/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("/lib/fonts/leaguespartan-bold.woff2") format("woff2"), url("/lib/fonts/leaguespartan-bold.woff") format("woff"), url("/lib/fonts/leaguespartan-bold.ttf") format("truetype"), url("/lib/fonts/leaguespartan-bold.svg#league_spartanbold") format("svg");
+  font-style: normal; }
 body {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-size: 12pt;
+  color: #7F7F7F;
   overflow-x: hidden;
   padding-bottom: 100px;
-  font-size: 12pt;
-  background-color: #fffaf1; }
+  background-color: #fff; }
 
 img {
   max-width: 100%;
@@ -32,27 +38,21 @@ img {
   .number-nav li {
     padding: 5px 10px; }
 
-#home-wrapper {
-  height: 100%; }
-
-.island img {
+#island img {
   position: absolute; }
-  .island img:last-of-type {
+  #island img:last-of-type {
     position: relative; }
 
-.external-links {
+#external-links {
   font-size: 2.4rem;
   position: absolute;
   top: 20px;
   right: 30px; }
-  .external-links a {
+  #external-links a {
     margin: 0 10px;
-    color: #b86263; }
-    .external-links a:hover {
+    color: #7F7F7F; }
+    #external-links a:hover {
       color: #97ceb6; }
-
-.nav-links a, .nav-links span {
-  color: #97ceb6; }
 
 .image-display-container {
   padding-bottom: 50px; }
@@ -101,30 +101,60 @@ img {
   color: #c0a493; }
 
 .text-white {
-  color: #fffaf1; }
+  color: #fff; }
 
 .text-grey {
   color: #999999; }
 
-.text-spaced {
-  letter-spacing: 10px; }
+.text-gray {
+  color: #7F7F7F; }
 
-h3, h4, h6 {
-  margin: 0;
-  padding: 2px 0; }
+h1 {
+  font-size: 2em;
+  color: #7F7F7F;
+  text-align: center; }
+  h1.text-spaced {
+    display: block;
+    letter-spacing: .4em;
+    margin-right: -.2em;
+    margin-left: .2em; }
+
+h2 {
+  font-size: 1.5em;
+  color: #97ceb6;
+  text-align: center; }
+  h2.text-spaced {
+    display: block;
+    letter-spacing: .3em;
+    margin-right: -.15em;
+    margin-left: .15em; }
+
+h3 {
+  font-size: 1.17em;
+  text-align: center; }
+
+h4 {
+  font-size: 1.12em; }
+
+h5 {
+  font-size: .83em; }
+
+h6 {
+  font-size: .75em; }
 
 p {
-  color: #eb8c66;
+  font-size: .75em;
   text-indent: 20px; }
   p.no-indent {
     text-indent: 0px; }
 
 a {
-  color: #ffd7a1;
+  color: #97ceb6;
   cursor: pointer;
   transition: .3s; }
   a:hover, a:active {
-    color: #eb8c66;
+    color: #97ceb6;
+    opacity: 0.7;
     text-decoration: none; }
   a:visited {
     text-decoration: none; }
@@ -172,16 +202,15 @@ ul {
   background-color: #999999; }
 
 .btn {
-  color: #fffaf1;
-  border: none;
-  border-radius: 0;
-  margin-right: 10px;
-  height: 40px;
-  vertical-align: middle; }
+  color: #fff;
+  border-radius: 20px;
+  height: 40px; }
   .btn h4 {
+    position: relative;
+    bottom: 10px;
     padding: 5px; }
   .btn:hover {
-    color: #fffaf1; }
+    color: #fff; }
 
 .btn-floating {
   display: inline-block;
@@ -190,7 +219,7 @@ ul {
   border-radius: 50%;
   cursor: pointer; }
   .btn-floating i {
-    color: #fffaf1;
+    color: #fff;
     display: inline-block;
     width: inherit;
     text-align: center;

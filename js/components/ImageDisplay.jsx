@@ -13,7 +13,7 @@ class ImageDisplay extends React.Component {
 
         <div className="col-xs-18 col-xs-offset-3 col-md-4 col-md-offset-1">
           <br />
-          <p className="no-indent"><em className="text-blue text-spaced">{this.props.title}</em></p>
+          <p className="no-indent text-blue">{this.props.title}</p>
 
           <br />
           <p className="no-indent">{this.props.description}</p>

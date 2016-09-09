@@ -45,6 +45,40 @@ Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = require('react-router');
+
+function Button(props) {
+  return _react2['default'].createElement(
+    'div',
+    { className: 'row text-center' },
+    _react2['default'].createElement(
+      _reactRouter.Link,
+      { className: 'btn bg-blue', to: props.to },
+      _react2['default'].createElement(
+        'h4',
+        null,
+        props.text
+      )
+    )
+  );
+}
+
+exports['default'] = Button;
+module.exports = exports['default'];
+
+},{"react":258,"react-router":107}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
@@ -89,12 +123,8 @@ var ImageDisplay = (function (_React$Component) {
           _react2['default'].createElement('br', null),
           _react2['default'].createElement(
             'p',
-            { className: 'no-indent' },
-            _react2['default'].createElement(
-              'em',
-              { className: 'text-blue text-spaced' },
-              this.props.title
-            )
+            { className: 'no-indent text-blue' },
+            this.props.title
           ),
           _react2['default'].createElement('br', null),
           _react2['default'].createElement(
@@ -129,7 +159,7 @@ ImageDisplay.propTypes = {
 exports['default'] = ImageDisplay;
 module.exports = exports['default'];
 
-},{"../actions/PageActions":1,"react":258}],4:[function(require,module,exports){
+},{"../actions/PageActions":1,"react":258}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -175,7 +205,7 @@ var Index = (function (_React$Component) {
             { to: '/' },
             _react2['default'].createElement(
               'div',
-              { className: 'col-md-offset-1 bg-magenta logo-block text-center' },
+              { className: 'col-md-offset-1 bg-blue logo-block text-center' },
               _react2['default'].createElement('i', { className: 'logo text-white ion-ios-home' })
             )
           )
@@ -189,63 +219,6 @@ var Index = (function (_React$Component) {
 })(_react2['default'].Component);
 
 exports['default'] = Index;
-module.exports = exports['default'];
-
-},{"react":258,"react-router":107}],5:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = require('react-router');
-
-var NextButton = (function (_React$Component) {
-  _inherits(NextButton, _React$Component);
-
-  function NextButton() {
-    _classCallCheck(this, NextButton);
-
-    _get(Object.getPrototypeOf(NextButton.prototype), 'constructor', this).apply(this, arguments);
-  }
-
-  _createClass(NextButton, [{
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement(
-        _reactRouter.Link,
-        { to: this.props.to },
-        _react2['default'].createElement(
-          'div',
-          { className: 'fixed-action-btn' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'btn-floating btn-large bg-blue' },
-            _react2['default'].createElement('i', { className: 'icon ion-arrow-right-c' })
-          )
-        )
-      );
-    }
-  }]);
-
-  return NextButton;
-})(_react2['default'].Component);
-
-exports['default'] = NextButton;
 module.exports = exports['default'];
 
 },{"react":258,"react-router":107}],6:[function(require,module,exports){
@@ -410,7 +383,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
   )
 ), document.getElementById('react-root'));
 
-},{"./components/Index.jsx":4,"./pages/About.jsx":8,"./pages/Code.jsx":9,"./pages/CodePt1.jsx":10,"./pages/CodePt2.jsx":11,"./pages/CodePt3.jsx":12,"./pages/Design.jsx":13,"./pages/DesignPt1.jsx":14,"./pages/DesignPt2.jsx":15,"./pages/Home.jsx":16,"react":258,"react-dom":77,"react-router":107}],8:[function(require,module,exports){
+},{"./components/Index.jsx":5,"./pages/About.jsx":8,"./pages/Code.jsx":9,"./pages/CodePt1.jsx":10,"./pages/CodePt2.jsx":11,"./pages/CodePt3.jsx":12,"./pages/Design.jsx":13,"./pages/DesignPt1.jsx":14,"./pages/DesignPt2.jsx":15,"./pages/Home.jsx":16,"react":258,"react-dom":77,"react-router":107}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -451,21 +424,21 @@ var About = (function (_React$Component) {
           { className: "row" },
           _react2["default"].createElement(
             "div",
-            { className: "space-2 col-xs-20 col-xs-offset-2 col-sm-18 col-sm-offset-3 col-md-8 col-md-offset-8" },
+            { className: "col-xs-20 col-xs-offset-2 col-sm-18 col-sm-offset-3 col-md-8 col-md-offset-8" },
             _react2["default"].createElement(
               "h2",
-              { className: "space-2 text-center text-uppercase text-blue text-spaced" },
-              "A Winter's Tale"
+              { className: "space-2" },
+              "A Winter's Tale."
             ),
             _react2["default"].createElement(
               "p",
               { className: "text-justify" },
-              "For many years Julia wandered through life, aimless and confused. Then one fateful wintry evening, she ate a slice of gooey, delicious, homemade apple pie. From that moment forth, she lived with a newfound purpose: to achieve ultimate excellence in pie-making."
+              "For many years Julia wandered through life, aimless and confused. Then one fateful wintry evening, she ate a slice of gooey, delicious, homemade apple pie. From that moment forth, she lived with a newfound purpose: to achieve excellence in pie-making."
             ),
             _react2["default"].createElement(
               "p",
               { className: "text-justify" },
-              "Julia is now a junior studying computer science at Princeton University. When she’s not studying, sleeping, or making this website, she writes poetry and illustrates posters - and of course, she loves to pass time baking scrumptious apple pie."
+              "Julia is now a senior studying computer science at Princeton University. When she’s not studying, sleeping, or making this website, she writes poetry and illustrates posters - and of course, she loves to pass the time baking scrumptious apple pie."
             )
           )
         )
@@ -502,6 +475,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+var _componentsButtonJsx = require('../components/Button.jsx');
+
+var _componentsButtonJsx2 = _interopRequireDefault(_componentsButtonJsx);
+
 var Code = (function (_React$Component) {
   _inherits(Code, _React$Component);
 
@@ -525,58 +502,17 @@ var Code = (function (_React$Component) {
             { className: 'col-xs-20 col-xs-offset-2 col-sm-18 col-sm-offset-3 col-md-8 col-md-offset-8' },
             _react2['default'].createElement(
               'h2',
-              { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-              'Code'
+              { className: 'space-2' },
+              'Projects.'
             ),
             _react2['default'].createElement(
               'p',
               { className: 'text-justify' },
-              'I’ve done full-stack work, but in the end frontend development is my biggest passion. Who doesn’t like some good JavaScript wrangling?'
-            ),
-            _react2['default'].createElement(
-              'p',
-              { className: 'text-justify' },
-              'I find ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'UI animation'
-              ),
-              ' and ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'interaction design'
-              ),
-              ' particularly exciting. As of late, I’ve also fallen in love with ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'React'
-              ),
-              ' and ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'Flux'
-              ),
-              ' architecture.'
+              'I\'m first and foremost a web developer, with a special love for UI design. I find animation, illustration, and interaction design particularly exciting. I\'m especially a fan of React.'
             )
           )
         ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'row text-center' },
-          _react2['default'].createElement(
-            _reactRouter.Link,
-            { className: 'btn bg-blue', to: '/code/1' },
-            _react2['default'].createElement(
-              'h4',
-              { className: 'text-uppercase' },
-              'Explore'
-            )
-          )
-        )
+        _react2['default'].createElement(_componentsButtonJsx2['default'], { text: 'explore', to: '/code/1' })
       );
     }
   }]);
@@ -587,7 +523,7 @@ var Code = (function (_React$Component) {
 exports['default'] = Code;
 module.exports = exports['default'];
 
-},{"react":258,"react-router":107}],10:[function(require,module,exports){
+},{"../components/Button.jsx":3,"react":258,"react-router":107}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -608,13 +544,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _componentsButtonJsx = require('../components/Button.jsx');
+
+var _componentsButtonJsx2 = _interopRequireDefault(_componentsButtonJsx);
+
 var _componentsWebImageDisplayJsx = require('../components/WebImageDisplay.jsx');
 
 var _componentsWebImageDisplayJsx2 = _interopRequireDefault(_componentsWebImageDisplayJsx);
-
-var _componentsNextButtonJsx = require('../components/NextButton.jsx');
-
-var _componentsNextButtonJsx2 = _interopRequireDefault(_componentsNextButtonJsx);
 
 var CodePt1 = (function (_React$Component) {
   _inherits(CodePt1, _React$Component);
@@ -633,40 +569,44 @@ var CodePt1 = (function (_React$Component) {
         { className: 'fade-in' },
         _react2['default'].createElement(
           'h2',
-          { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-          'Julia’s Pies'
+          { className: 'row space-2' },
+          'Julia’s Pies.'
         ),
         _react2['default'].createElement(
           'div',
-          { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
-          _react2['default'].createElement(
-            'p',
-            null,
-            'I was still learning HTML, CSS, and JS when I made this website for my pie catering business. It was a great starter project: just a static page with some basic animations. My first step was to create some branding around which I could base the design of the website:'
-          ),
+          { className: 'row' },
           _react2['default'].createElement(
             'div',
-            { className: 'row space-1' },
+            { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
+            _react2['default'].createElement(
+              'p',
+              null,
+              'I was still learning HTML, CSS, and JS when I made this website for my pie catering business. It was a great starter project: just a static page with some basic animations. My first step was to create some branding around which I could base the design of the website:'
+            ),
             _react2['default'].createElement(
               'div',
-              { className: 'col-xs-12 col-xs-offset-6' },
-              _react2['default'].createElement('img', { src: 'img/juliaspieslogo.png' })
-            )
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'Then I started coding. My first attempt resulted in this emabarrassingly monotonous but generally functional page:'
-          ),
-          _react2['default'].createElement('img', { className: 'img-web', src: 'img/juliaspiesold.png' }),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'Thankfully I overhauled it pretty quickly. As I got to know JavaScript a little bit better, I decided to make the page more fresh and informative with some tabs and photographs. I used Bootstrap for a quick grid solution in the finished product.'
-          ),
-          _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/juliaspiesnew.png', href: '//juliaspies.me' })
+              { className: 'row space-1' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'col-xs-12 col-xs-offset-6' },
+                _react2['default'].createElement('img', { src: 'img/projects/juliaspieslogo.png' })
+              )
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Then I started coding. My first attempt resulted in this emabarrassingly monotonous but generally functional page:'
+            ),
+            _react2['default'].createElement('img', { className: 'img-web', src: 'img/projects/juliaspiesold.png' }),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Thankfully I overhauled it pretty quickly. As I got to know JavaScript a little bit better, I decided to make the page more fresh and informative with some tabs and photographs. I used Bootstrap for a quick grid solution in the finished product.'
+            ),
+            _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/projects/juliaspiesnew.png', href: '//juliaspies.me' })
+          )
         ),
-        _react2['default'].createElement(_componentsNextButtonJsx2['default'], { to: '/code/2' })
+        _react2['default'].createElement(_componentsButtonJsx2['default'], { text: 'next', to: '/code/2' })
       );
     }
   }]);
@@ -677,7 +617,7 @@ var CodePt1 = (function (_React$Component) {
 exports['default'] = CodePt1;
 module.exports = exports['default'];
 
-},{"../components/NextButton.jsx":5,"../components/WebImageDisplay.jsx":6,"react":258}],11:[function(require,module,exports){
+},{"../components/Button.jsx":3,"../components/WebImageDisplay.jsx":6,"react":258}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -698,13 +638,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _componentsButtonJsx = require('../components/Button.jsx');
+
+var _componentsButtonJsx2 = _interopRequireDefault(_componentsButtonJsx);
+
 var _componentsWebImageDisplayJsx = require('../components/WebImageDisplay.jsx');
 
 var _componentsWebImageDisplayJsx2 = _interopRequireDefault(_componentsWebImageDisplayJsx);
-
-var _componentsNextButtonJsx = require('../components/NextButton.jsx');
-
-var _componentsNextButtonJsx2 = _interopRequireDefault(_componentsNextButtonJsx);
 
 var CodePt2 = (function (_React$Component) {
   _inherits(CodePt2, _React$Component);
@@ -723,67 +663,71 @@ var CodePt2 = (function (_React$Component) {
         { className: 'fade-in' },
         _react2['default'].createElement(
           'h2',
-          { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-          'WalkMe'
+          { className: 'row space-2' },
+          'WalkMe.'
         ),
         _react2['default'].createElement(
           'div',
-          { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
-          _react2['default'].createElement(
-            'p',
-            null,
-            'WalkMe is a multi-platform app that recommends the safest walking path from A to B. My team made WalkMe as a final project for Princeton\'s COS 333, taught by Brian Kernighan. I was the primary frontend contributor on this project.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'After researching different choices for frontend frameworks, we decided on ',
-            _react2['default'].createElement(
-              'a',
-              { href: '//ionicframework.com/', target: '_blank' },
-              'Ionic'
-            ),
-            ', a hybrid app framework built on ',
-            _react2['default'].createElement(
-              'a',
-              { href: '//angularjs.org', target: '_blank' },
-              'Angular'
-            ),
-            '. I found the Angular learning curve to be a little steep, and its controller logic to be quite messy; I probably won’t use it again for a future project. Still, using Ionic speeded up our workflow significantly, as it gave us multi-platform functionality and several built-in components and utilities for free.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'As you can see, we decided to emulate the appearance of Google Maps such that the interface would feel familiar to the user. We used several material design components, such as the floating action button; this played well with the Ionic framework, which is also quite material.'
-          ),
-          _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/walkmehome.png', href: '//walkme.herokuapp.com' }),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'The interface underwent many iterations. After performing usability testing, I ended up implementing many new features that provided extra assurance to the user. These included autocomplete, a larger range of descriptive colors indicating route safety, and infographics displaying more detailed security data.'
-          ),
+          { className: 'row' },
           _react2['default'].createElement(
             'div',
-            { className: 'row' },
+            { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
             _react2['default'].createElement(
-              'div',
-              { className: 'col-sm-12' },
-              _react2['default'].createElement('img', { className: 'img-web', src: 'img/walkmeabout.png' })
+              'p',
+              null,
+              'WalkMe is a multi-platform app that recommends the safest walking path from A to B. My team made WalkMe as a final project for Princeton\'s COS 333, taught by Brian Kernighan. I was the primary frontend contributor on this project.'
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'After researching different choices for frontend frameworks, we decided on ',
+              _react2['default'].createElement(
+                'a',
+                { href: '//ionicframework.com/', target: '_blank' },
+                'Ionic'
+              ),
+              ', a hybrid app framework built on ',
+              _react2['default'].createElement(
+                'a',
+                { href: '//angularjs.org', target: '_blank' },
+                'Angular'
+              ),
+              '. I found the Angular learning curve to be a little steep, and its controller logic to be quite messy; I probably won’t use it again for a future project. Still, using Ionic speeded up our workflow significantly, as it gave us multi-platform functionality and several built-in components and utilities for free.'
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'As you can see, we decided to emulate the appearance of Google Maps such that the interface would feel familiar to the user. We used several material design components, such as the floating action button; this played well with the Ionic framework, which is also quite material.'
+            ),
+            _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/projects/walkmehome.png', href: '//walkme.herokuapp.com' }),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'The interface underwent many iterations. After performing usability testing, I ended up implementing many new features that provided extra assurance to the user. These included autocomplete, a larger range of descriptive colors indicating route safety, and infographics displaying more detailed security data.'
             ),
             _react2['default'].createElement(
               'div',
-              { className: 'col-sm-12' },
-              _react2['default'].createElement('img', { className: 'img-web', src: 'img/walkmeroutes.png' })
-            )
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'Besides my work on the app itself, I also created a product website to go with our presentation deck:'
-          ),
-          _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/walkmeweb.jpg', href: '//princeton.edu/~eyli/wm' })
+              { className: 'row' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'col-sm-12' },
+                _react2['default'].createElement('img', { className: 'img-web', src: 'img/projects/walkmeabout.png' })
+              ),
+              _react2['default'].createElement(
+                'div',
+                { className: 'col-sm-12' },
+                _react2['default'].createElement('img', { className: 'img-web', src: 'img/projects/walkmeroutes.png' })
+              )
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Besides my work on the app itself, I also created a product website to go with our presentation deck:'
+            ),
+            _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/projects/walkmeweb.jpg', href: '//princeton.edu/~eyli/wm' })
+          )
         ),
-        _react2['default'].createElement(_componentsNextButtonJsx2['default'], { to: '/code/3' })
+        _react2['default'].createElement(_componentsButtonJsx2['default'], { text: 'next', to: '/code/3' })
       );
     }
   }]);
@@ -794,7 +738,7 @@ var CodePt2 = (function (_React$Component) {
 exports['default'] = CodePt2;
 module.exports = exports['default'];
 
-},{"../components/NextButton.jsx":5,"../components/WebImageDisplay.jsx":6,"react":258}],12:[function(require,module,exports){
+},{"../components/Button.jsx":3,"../components/WebImageDisplay.jsx":6,"react":258}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -819,10 +763,6 @@ var _componentsWebImageDisplayJsx = require('../components/WebImageDisplay.jsx')
 
 var _componentsWebImageDisplayJsx2 = _interopRequireDefault(_componentsWebImageDisplayJsx);
 
-var _componentsNextButtonJsx = require('../components/NextButton.jsx');
-
-var _componentsNextButtonJsx2 = _interopRequireDefault(_componentsNextButtonJsx);
-
 var CodePt3 = (function (_React$Component) {
   _inherits(CodePt3, _React$Component);
 
@@ -840,88 +780,81 @@ var CodePt3 = (function (_React$Component) {
         { className: 'fade-in' },
         _react2['default'].createElement(
           'h2',
-          { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-          'I Hate Everyone'
+          { className: 'row space-2' },
+          'I Hate Everyone.'
         ),
         _react2['default'].createElement(
           'div',
-          { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
-          _react2['default'].createElement(
-            'p',
-            null,
-            'This is probably my favorite project of all. I made ',
-            _react2['default'].createElement(
-              'em',
-              null,
-              'I Hate Everyone'
-            ),
-            ' as a final project for my computer graphics class at Princeton. IHE is a 2D particle system game in which you play this poor fellow in his battle against the injustices of the world:'
-          ),
+          { className: 'row' },
           _react2['default'].createElement(
             'div',
-            { className: 'row space-1' },
+            { className: 'col-xs-18 col-xs-offset-3 col-md-12 col-md-offset-6' },
+            _react2['default'].createElement(
+              'p',
+              null,
+              'This is probably my favorite project of all. I made ',
+              _react2['default'].createElement(
+                'em',
+                null,
+                'I Hate Everyone'
+              ),
+              ' as a final project for my computer graphics class at Princeton. IHE is a 2D particle system game in which you play this poor fellow in his battle against the injustices of the world:'
+            ),
             _react2['default'].createElement(
               'div',
-              { className: 'col-xs-12 col-xs-offset-6' },
-              _react2['default'].createElement('img', { src: 'img/ihedude.png' })
-            )
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'I implemented IHE with the help of ',
-            _react2['default'].createElement(
-              'a',
-              { href: '//julian.com/research/velocity', target: '_blank' },
-              'Velocity.js'
+              { className: 'row space-1' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'col-xs-12 col-xs-offset-6' },
+                _react2['default'].createElement('img', { src: 'img/projects/ihedude.png' })
+              )
             ),
-            ' for fluid UI animations and ',
             _react2['default'].createElement(
-              'a',
-              { href: '//www.pixijs.com/', target: '_blank' },
-              'PIXI.js'
-            ),
-            ' as an HTML5 canvas wrapper. The game runs on a simple physics engine I wrote for 2D collision detection, as well as some biologically inspired heuristics for organism growth and evolution.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'PIXI.js was a real lifesaver on this one. I began with a naive choice of ',
-            _react2['default'].createElement(
-              'a',
-              { href: '//paperjs.org', target: '_blank' },
-              'Paper.js'
-            ),
-            ' as my canvas wrapper, but I soon found that Paper choked the framerate to near zero on particle counts over just a couple hundred. This was because Paper is built for vector graphics, not for large particle systems. PIXI, however, is a hardware-accelerated sprite-based engine, so it performs amazingly well on high particle counts. Check out this crazy demo:'
-          ),
-          _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/bunnymark.jpg', href: '//www.goodboydigital.com/pixijs/bunnymark', target: '_blank' }),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'Looking forward, this is likely the last project I will ever write in ES5. I wrestled with prototypes and inheritance for ',
-            _react2['default'].createElement(
-              'em',
+              'p',
               null,
-              'far'
+              'I implemented IHE with the help of ',
+              _react2['default'].createElement(
+                'a',
+                { href: '//julian.com/research/velocity', target: '_blank' },
+                'Velocity.js'
+              ),
+              ' for fluid UI animations and ',
+              _react2['default'].createElement(
+                'a',
+                { href: '//www.pixijs.com/', target: '_blank' },
+                'PIXI.js'
+              ),
+              ' as an HTML5 canvas wrapper. The game runs on a simple physics engine I wrote for 2D collision detection, as well as some biologically inspired heuristics for organism growth and evolution.'
             ),
-            ' too long.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'Go ahead, try playing! Sorry to you Firefox users, but the game has only been tested in Chrome. :('
-          ),
-          _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/ihe.png', href: '//juliahw.github.io/i-hate-everyone', target: '_blank' }),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'For a more in-depth description of the project and implementation, check out my ',
             _react2['default'].createElement(
-              'a',
-              { href: 'img/ihe.pdf', target: '_blank' },
-              'final project report'
+              'p',
+              null,
+              'PIXI.js was a real lifesaver on this one. I began with a naive choice of ',
+              _react2['default'].createElement(
+                'a',
+                { href: '//paperjs.org', target: '_blank' },
+                'Paper.js'
+              ),
+              ' as my canvas wrapper, but I soon found that Paper choked the framerate to near zero on particle counts over just a couple hundred. This was because Paper is built for vector graphics, not for large particle systems. PIXI, however, is a hardware-accelerated sprite-based engine, so it performs amazingly well on high particle counts. Check out this crazy demo:'
             ),
-            '.'
+            _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/projects/bunnymark.jpg', href: '//www.goodboydigital.com/pixijs/bunnymark', target: '_blank' }),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Looking forward, this is likely the last project I will ever write in ES5. I wrestled with prototypes and inheritance for ',
+              _react2['default'].createElement(
+                'em',
+                null,
+                'far'
+              ),
+              ' too long.'
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Go ahead, try playing! Sorry to you Firefox users, but the game has only been tested in Chrome. :('
+            ),
+            _react2['default'].createElement(_componentsWebImageDisplayJsx2['default'], { src: 'img/projects/ihe.png', href: '//juliahw.github.io/i-hate-everyone', target: '_blank' })
           )
         )
       );
@@ -934,7 +867,7 @@ var CodePt3 = (function (_React$Component) {
 exports['default'] = CodePt3;
 module.exports = exports['default'];
 
-},{"../components/NextButton.jsx":5,"../components/WebImageDisplay.jsx":6,"react":258}],13:[function(require,module,exports){
+},{"../components/WebImageDisplay.jsx":6,"react":258}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -956,6 +889,10 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
+
+var _componentsButtonJsx = require('../components/Button.jsx');
+
+var _componentsButtonJsx2 = _interopRequireDefault(_componentsButtonJsx);
 
 var Design = (function (_React$Component) {
   _inherits(Design, _React$Component);
@@ -980,52 +917,17 @@ var Design = (function (_React$Component) {
             { className: 'col-xs-20 col-xs-offset-2 col-sm-18 col-sm-offset-3 col-md-8 col-md-offset-8' },
             _react2['default'].createElement(
               'h2',
-              { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-              'Design'
+              { className: 'space-2' },
+              'Graphic Design.'
             ),
             _react2['default'].createElement(
               'p',
               { className: 'text-justify' },
-              'I\'ve loved traditional art since I was a wee babe, but I find myself picking up a pencil and paper less and less nowadays. Once I got to know the speed and fluidity of digital design, I could never go back.'
-            ),
-            _react2['default'].createElement(
-              'p',
-              { className: 'text-justify' },
-              'My go-to tools are my trusty Wacom tablet and ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'Adobe Photoshop.'
-              ),
-              ' If I’m feeling funky, I’ll work with ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'Illustrator'
-              ),
-              ' and ',
-              _react2['default'].createElement(
-                'span',
-                { className: 'text-blue' },
-                'InDesign'
-              ),
-              ' as well.'
+              'Growing up, my favorite activity was to draw spaceships in the shape of wedding cakes, inhabited by all manner of strange creatures. That love for the whimsical has stayed with me. Today, it\'s a defining aesthetic of my designs.'
             )
           )
         ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'row text-center' },
-          _react2['default'].createElement(
-            _reactRouter.Link,
-            { className: 'btn bg-blue', to: '/design/1' },
-            _react2['default'].createElement(
-              'h4',
-              { className: 'text-uppercase' },
-              'Explore'
-            )
-          )
-        )
+        _react2['default'].createElement(_componentsButtonJsx2['default'], { text: 'explore', to: '/design/1' })
       );
     }
   }]);
@@ -1036,7 +938,7 @@ var Design = (function (_React$Component) {
 exports['default'] = Design;
 module.exports = exports['default'];
 
-},{"react":258,"react-router":107}],14:[function(require,module,exports){
+},{"../components/Button.jsx":3,"react":258,"react-router":107}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1057,9 +959,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _componentsNextButtonJsx = require('../components/NextButton.jsx');
+var _componentsButtonJsx = require('../components/Button.jsx');
 
-var _componentsNextButtonJsx2 = _interopRequireDefault(_componentsNextButtonJsx);
+var _componentsButtonJsx2 = _interopRequireDefault(_componentsButtonJsx);
 
 var _componentsImageDisplayJsx = require('../components/ImageDisplay.jsx');
 
@@ -1082,8 +984,8 @@ var DesignPt1 = (function (_React$Component) {
         { className: 'fade-in' },
         _react2['default'].createElement(
           'h2',
-          { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-          'The Serious Stuff'
+          { className: 'space-2' },
+          'The Serious Stuff.'
         ),
         _react2['default'].createElement(
           'div',
@@ -1095,22 +997,22 @@ var DesignPt1 = (function (_React$Component) {
           )
         ),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/aroundtheworld.png',
-          title: 'around the world',
+          src: 'img/design/aroundtheworld.png',
+          title: 'Around the World.',
           description: 'This was for a multicultural fair that happens every fall at Princeton. I clearly remember this was the first poster I made that I wasn’t ashamed of.',
           dimensions: '8.5 in x 11 in',
           software: 'Adobe Photoshop'
         }),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/newyear.png',
-          title: 'lunar new year',
+          src: 'img/design/newyear.png',
+          title: 'Lunar New Year.',
           description: 'The Princeton Chinese Students’ Association holds a Chinese New Year banquet every year. I started to really have fun with Photoshop brushes for this one.',
           dimensions: '11 in x 17 in',
           software: 'Adobe Photoshop'
         }),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/moon.png',
-          title: 'moon festival',
+          src: 'img/design/moon.png',
+          title: 'Moon Festival.',
           description: 'I wanted to come up with a color scheme less trite than the usual red or blue/white. The pop of pink ended up being a nice callout to passersby.',
           dimensions: '11 in x 17 in',
           software: 'Adobe Photoshop'
@@ -1125,19 +1027,19 @@ var DesignPt1 = (function (_React$Component) {
           )
         ),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/hamilton.png',
-          title: 'hamilton lecture',
+          src: 'img/design/hamilton.png',
+          title: 'Hamilton Lecture.',
           description: 'I took on this project from the physics department with the goal of working with more typographical elements. In the end, I regret breaking up the canvas into so many sections; a cleaner poster may have looked better.',
           dimensions: '24 in x 34 in',
           software: 'Adobe Photoshop'
         }),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/math.png',
-          title: 'math club shirt',
+          src: 'img/design/math.png',
+          title: 'Math Club Shirt.',
           description: 'This one was a real struggle. I can’t count how many iterations it went through, but I came away from it with more confidence in my creative process and much better knowledge of Illustrator.',
           software: 'Adobe Illustrator'
         }),
-        _react2['default'].createElement(_componentsNextButtonJsx2['default'], { to: '/design/2' })
+        _react2['default'].createElement(_componentsButtonJsx2['default'], { text: 'next', to: '/design/2' })
       );
     }
   }]);
@@ -1148,7 +1050,7 @@ var DesignPt1 = (function (_React$Component) {
 exports['default'] = DesignPt1;
 module.exports = exports['default'];
 
-},{"../components/ImageDisplay.jsx":3,"../components/NextButton.jsx":5,"react":258}],15:[function(require,module,exports){
+},{"../components/Button.jsx":3,"../components/ImageDisplay.jsx":4,"react":258}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1173,10 +1075,6 @@ var _componentsImageDisplayJsx = require('../components/ImageDisplay.jsx');
 
 var _componentsImageDisplayJsx2 = _interopRequireDefault(_componentsImageDisplayJsx);
 
-var _componentsNextButtonJsx = require('../components/NextButton.jsx');
-
-var _componentsNextButtonJsx2 = _interopRequireDefault(_componentsNextButtonJsx);
-
 var DesignPt2 = (function (_React$Component) {
   _inherits(DesignPt2, _React$Component);
 
@@ -1194,8 +1092,8 @@ var DesignPt2 = (function (_React$Component) {
         { className: 'fade-in' },
         _react2['default'].createElement(
           'h2',
-          { className: 'space-2 text-center text-uppercase text-blue text-spaced' },
-          'The Fun Stuff'
+          { className: 'space-2' },
+          'The Fun Stuff.'
         ),
         _react2['default'].createElement(
           'div',
@@ -1207,22 +1105,22 @@ var DesignPt2 = (function (_React$Component) {
           )
         ),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/pigeon.png',
-          title: 'pigeon',
+          src: 'img/design/pigeon.png',
+          title: 'Pigeon.',
           description: 'The new summer blockbuster.',
           dimensions: '20.25 in x 30 in',
           software: 'Adobe Photoshop'
         }),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/troubleshooting.png',
-          title: 'troubleshooting apple pie',
+          src: 'img/design/troubleshooting.png',
+          title: 'Troubleshooting Apple Pie.',
           description: 'An aggregation of all the pieous lessons I’ve learned over the years.',
           dimensions: '9.75 in x 16.5 in',
           software: 'Adobe Photoshop'
         }),
         _react2['default'].createElement(_componentsImageDisplayJsx2['default'], {
-          src: 'img/nothing.png',
-          title: 'a slice',
+          src: 'img/design/nothing.png',
+          title: 'A Slice of Apple Pie.',
           description: 'A quick study in a one-color palette.',
           software: 'Adobe Photoshop'
         })
@@ -1236,7 +1134,7 @@ var DesignPt2 = (function (_React$Component) {
 exports['default'] = DesignPt2;
 module.exports = exports['default'];
 
-},{"../components/ImageDisplay.jsx":3,"../components/NextButton.jsx":5,"react":258}],16:[function(require,module,exports){
+},{"../components/ImageDisplay.jsx":4,"react":258}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1259,6 +1157,83 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+function ExternalLinks(props) {
+  return _react2['default'].createElement(
+    'div',
+    { className: 'row', id: 'external-links' },
+    _react2['default'].createElement(
+      'a',
+      { href: 'img/juliawangcv.pdf', target: '_blank' },
+      _react2['default'].createElement('i', { className: 'ion-clipboard' })
+    ),
+    _react2['default'].createElement(
+      'a',
+      { href: 'mailto:juliahw@princeton.edu', target: '_top' },
+      _react2['default'].createElement('i', { className: 'ion-paper-airplane' })
+    ),
+    _react2['default'].createElement(
+      'a',
+      { href: '//github.com/juliahw', target: '_blank' },
+      _react2['default'].createElement('i', { className: 'ion-social-github' })
+    ),
+    _react2['default'].createElement(
+      'a',
+      { href: '//linkedin.com/in/juliahw', target: '_blank' },
+      _react2['default'].createElement('i', { className: 'ion-social-linkedin-outline' })
+    )
+  );
+}
+
+function NavLinks(props) {
+  return _react2['default'].createElement(
+    'div',
+    { className: 'row space-2 text-blue text-center' },
+    _react2['default'].createElement(
+      _reactRouter.Link,
+      { to: '/about' },
+      'about'
+    ),
+    _react2['default'].createElement(
+      'span',
+      null,
+      '  ·  '
+    ),
+    _react2['default'].createElement(
+      _reactRouter.Link,
+      { to: '/code' },
+      'projects'
+    ),
+    _react2['default'].createElement(
+      'span',
+      null,
+      '  ·  '
+    ),
+    _react2['default'].createElement(
+      _reactRouter.Link,
+      { to: '/design' },
+      'graphic design'
+    )
+  );
+}
+
+function Island(props) {
+  return _react2['default'].createElement(
+    'div',
+    { className: 'row', id: 'island' },
+    _react2['default'].createElement(
+      'div',
+      { className: 'col-sm-18 col-sm-offset-3 col-md-12 col-md-offset-6' },
+      _react2['default'].createElement(
+        'div',
+        { className: 'space-3' },
+        _react2['default'].createElement('img', { className: 'hover2', src: 'img/cloud1.png' }),
+        _react2['default'].createElement('img', { className: 'hover3', src: 'img/cloud2.png' }),
+        _react2['default'].createElement('img', { className: 'hover', src: 'img/island.png' })
+      )
+    )
+  );
+}
+
 var Home = (function (_React$Component) {
   _inherits(Home, _React$Component);
 
@@ -1273,92 +1248,15 @@ var Home = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'fade-in', id: 'home-wrapper' },
-        _react2['default'].createElement(
-          'div',
-          { className: 'external-links row text-center' },
-          _react2['default'].createElement(
-            'a',
-            { href: 'img/juliawangcv.pdf', target: '_blank' },
-            _react2['default'].createElement('i', { className: 'ion-clipboard' })
-          ),
-          _react2['default'].createElement(
-            'a',
-            { href: 'mailto:juliahw@princeton.edu', target: '_top' },
-            _react2['default'].createElement('i', { className: 'ion-paper-airplane' })
-          ),
-          _react2['default'].createElement(
-            'a',
-            { href: '//github.com/juliahw', target: '_blank' },
-            _react2['default'].createElement('i', { className: 'ion-social-github' })
-          ),
-          _react2['default'].createElement(
-            'a',
-            { href: '//linkedin.com/in/juliahw', target: '_blank' },
-            _react2['default'].createElement('i', { className: 'ion-social-linkedin-outline' })
-          )
-        ),
+        { className: 'fade-in' },
+        _react2['default'].createElement(ExternalLinks, null),
         _react2['default'].createElement(
           'h1',
-          { className: 'row space-1 text-center text-uppercase text-magenta text-spaced' },
-          'Julia Wang'
+          { className: 'row space-1' },
+          'Julia Wang.'
         ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'nav-links row space-2 text-center text-spaced' },
-          _react2['default'].createElement(
-            _reactRouter.Link,
-            { to: '/about' },
-            _react2['default'].createElement(
-              'em',
-              null,
-              'about'
-            )
-          ),
-          _react2['default'].createElement(
-            'span',
-            null,
-            ' · '
-          ),
-          _react2['default'].createElement(
-            _reactRouter.Link,
-            { to: '/design' },
-            _react2['default'].createElement(
-              'em',
-              null,
-              'design'
-            )
-          ),
-          _react2['default'].createElement(
-            'span',
-            null,
-            ' · '
-          ),
-          _react2['default'].createElement(
-            _reactRouter.Link,
-            { to: '/code' },
-            _react2['default'].createElement(
-              'em',
-              null,
-              'code'
-            )
-          )
-        ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'island row' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'col-sm-18 col-sm-offset-3 col-md-12 col-md-offset-6' },
-            _react2['default'].createElement(
-              'div',
-              { className: 'space-3' },
-              _react2['default'].createElement('img', { className: 'hover2', src: 'img/cloud1.png' }),
-              _react2['default'].createElement('img', { className: 'hover3', src: 'img/cloud2.png' }),
-              _react2['default'].createElement('img', { className: 'hover', src: 'img/island.png' })
-            )
-          )
-        )
+        _react2['default'].createElement(NavLinks, null),
+        _react2['default'].createElement(Island, null)
       );
     }
   }]);
