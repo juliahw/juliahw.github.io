@@ -14,7 +14,14 @@ function ExternalLinks(props) {
         <i className="ion-social-github" />
       </a>
       <a href="//linkedin.com/in/juliahw" target="_blank">
-        <i className="ion-social-linkedin-outline" />
+        <i
+          className="ion-social-linkedin-outline"
+          style={{
+            fontSize:'2.8rem',
+            position:'relative',
+            top:'2px'
+          }}
+        />
       </a>
     </div>
   );

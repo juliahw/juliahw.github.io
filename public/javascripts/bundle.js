@@ -1139,7 +1139,14 @@ function ExternalLinks(props) {
     _react2['default'].createElement(
       'a',
       { href: '//linkedin.com/in/juliahw', target: '_blank' },
-      _react2['default'].createElement('i', { className: 'ion-social-linkedin-outline' })
+      _react2['default'].createElement('i', {
+        className: 'ion-social-linkedin-outline',
+        style: {
+          fontSize: '2.8rem',
+          position: 'relative',
+          top: '2px'
+        }
+      })
     )
   );
 }
