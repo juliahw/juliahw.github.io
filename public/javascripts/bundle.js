@@ -161,7 +161,7 @@ var Index = (function (_React$Component) {
             { to: '/' },
             _react2['default'].createElement(
               'div',
-              { className: 'col-md-offset-1 bg-blue logo-block text-center' },
+              { className: 'bounce col-md-offset-1 bg-blue logo-block text-center' },
               _react2['default'].createElement('i', { className: 'logo text-white ion-ios-home' })
             )
           )
@@ -1192,9 +1192,11 @@ function Island(props) {
       _react2['default'].createElement(
         'div',
         { className: 'space-3' },
-        _react2['default'].createElement('img', { className: 'hover2', src: 'img/cloud1.png' }),
-        _react2['default'].createElement('img', { className: 'hover3', src: 'img/cloud2.png' }),
-        _react2['default'].createElement('img', { className: 'hover', src: 'img/island.png' })
+        _react2['default'].createElement('img', { className: 'hide-xs hover2', src: 'img/island/cloud1.png' }),
+        _react2['default'].createElement('img', { className: 'hover3', src: 'img/island/cloud2.png' }),
+        _react2['default'].createElement('img', { className: 'hover4', src: 'img/island/cloud3.png' }),
+        _react2['default'].createElement('img', { className: 'hover', src: 'img/island/land.png' }),
+        _react2['default'].createElement('img', { className: 'rise-in', src: 'img/island/moon.png' })
       )
     )
   );
@@ -1214,7 +1216,7 @@ var Home = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'fade-in' },
+        { className: 'fade-in-slow' },
         _react2['default'].createElement(ExternalLinks, null),
         _react2['default'].createElement(
           'h1',

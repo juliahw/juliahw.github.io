@@ -44,9 +44,11 @@ function Island(props) {
     <div className="row" id="island">
       <div className="col-sm-18 col-sm-offset-3 col-md-12 col-md-offset-6">
         <div className="space-3">
-          <img className="hover2" src="img/cloud1.png" />
-          <img className="hover3" src="img/cloud2.png" />
-          <img className="hover" src="img/island.png" />
+          <img className="hide-xs hover2" src="img/island/cloud1.png" />
+          <img className="hover3" src="img/island/cloud2.png" />
+          <img className="hover4" src="img/island/cloud3.png" />
+          <img className="hover" src="img/island/land.png" />
+          <img className="rise-in" src="img/island/moon.png" />
         </div>
       </div>
     </div>
@@ -56,7 +58,7 @@ function Island(props) {
 class Home extends React.Component {
   render() {
     return (
-      <div className="fade-in">
+      <div className="fade-in-slow">
         <ExternalLinks />
 
         <h1 className="row space-1">

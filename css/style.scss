@@ -13,6 +13,7 @@ $blue: #97ceb6;
 $green: #97c197;
 $brown: #c0a493;
 $white: #fff;
+$dark-white: #e5e9e9;
 $gray: #7F7F7F;
 
 $icon-font-size: 2.4rem;
@@ -48,6 +49,27 @@ $icon-font-size: 2.4rem;
   animation: #{$str};
 }
 
+@mixin hover($name, $duration, $top, $bottom) {
+  @include keyframes($name) {
+    0% {
+      transform: translate3d(0, #{$top}, 0);
+      -webkit-transform: translate3d(0, #{$top}, 0);
+      animation-timing-function: ease-in-out;
+    }
+    50% {
+      transform: translate3d(0, #{$bottom}, 0);
+      -webkit-transform: translate3d(0, #{$bottom}, 0);
+      animation-timing-function: ease-in-out;
+    }
+    100% {
+      transform: translate3d(0, #{$top}, 0);
+      -webkit-transform: translate3d(0, #{$top}, 0);
+    }
+  }
+
+  @include animation($name $duration infinite);
+}
+
 // ----------------------------------------------------------------------------
 // General
 // ----------------------------------------------------------------------------
@@ -57,8 +79,9 @@ body {
   font-size: 12pt;
   color: $gray;
   overflow-x: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   background-color: $white;
+  @extend .brighten;
 }
 
 img {
@@ -68,20 +91,23 @@ img {
 
 .logo-block {
   @extend .fade-on-hover;
+  @include animation('bounce-in 2s ease-in-out');
+
+  position: relative;
   cursor: pointer;
   width: 60px;
-  height: 60px;
+  height: 65px;
+  top: -5px;
   border-bottom-right-radius: 10px;
 
   .logo {
     display: inline-block;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    top: 19px;
     font-size: $icon-font-size;
   }
 }
+
 
 // ----------------------------------------------------------------------------
 // Home
@@ -317,55 +343,29 @@ a {
 // Animations
 // ----------------------------------------------------------------------------
 
-@include keyframes(hover) {
+@include keyframes(bounce-in) {
   0% {
-    transform: translate3d(0, 10px, 0px);
-    -webkit-transform: translate3d(0, 10px, 0px);
-    animation-timing-function: ease-in-out;
+    -webkit-transform: translate3d(0, -60px, 0);
   }
   50% {
-    transform: translate3d(0, -10px, 0px);
-    -webkit-transform: translate3d(0, -10px, 0px);
-    animation-timing-function: ease-in-out;
+    -webkit-transform: translate3d(0, -60px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 3px, 0);
   }
   100% {
-    transform: translate3d(0, 10px, 0px);
-    -webkit-transform: translate3d(0, 10px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
-@include keyframes(hover2) {
-  0% {
-    transform: translate3d(0, -15px, 0px);
-    -webkit-transform: translate3d(0, -15px, 0px);
-    animation-timing-function: ease-in-out;
-  }
-  50% {
-    transform: translate3d(0, 5px, 0px);
-    -webkit-transform: translate3d(0, 5px, 0px);
-    animation-timing-function: ease-in-out;
-  }
-  100% {
-    transform: translate3d(0, -15px, 0px);
-    -webkit-transform: translate3d(0, -15px, 0px);
-  }
+@include keyframes(brighten) {
+  from { background-color: $dark-white; }
+  to { background-color: $white; }
 }
 
-@include keyframes(hover3) {
-  0% {
-    transform: translate3d(0, -10px, 0px);
-    -webkit-transform: translate3d(0, -10px, 0px);
-    animation-timing-function: ease-in-out;
-  }
-  50% {
-    transform: translate3d(0, 5px, 0px);
-    -webkit-transform: translate3d(0, 5px, 0px);
-    animation-timing-function: ease-in-out;
-  }
-  100% {
-    transform: translate3d(0, -10px, 0px);
-    -webkit-transform: translate3d(0, -10px, 0px);
-  }
+@include keyframes(rise-in) {
+  from { transform: translate3d(0, 120px, 0); }
+  to {transform: translate3d(0, 0, 0); }
 }
 
 @include keyframes(fade-in) {
@@ -373,7 +373,11 @@ a {
   to { opacity: 1; }
 }
 
-.hover { @include animation('hover 4s infinite'); }
-.hover2 { @include animation('hover2 10s infinite'); }
-.hover3 { @include animation('hover3 10s infinite'); }
+.hover { @include hover('hover', 4s, 5px, -5px); }
+.hover2 { @include hover('hover2', 6s, 5px, -5px); }
+.hover3 { @include hover('hover3', 10s, 7px, -7px); }
+.hover4 { @include hover('hover4', 8s, 10px, -10px); }
 .fade-in { @include animation('fade-in 0.5s'); }
+.fade-in-slow { @include animation('fade-in 2s'); }
+.rise-in { @include animation('rise-in 4s'); }
+.brighten { @include animation('brighten 4s'); }
