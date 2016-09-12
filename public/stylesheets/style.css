@@ -21,6 +21,7 @@ img {
   -ms-animation: bounce-in 2s ease-in-out;
   -o-animation: bounce-in 2s ease-in-out;
   animation: bounce-in 2s ease-in-out;
+  background-color: #97ceb6;
   position: relative;
   cursor: pointer;
   width: 60px;
@@ -87,20 +88,8 @@ img {
     .img-web-overlay .overlay:hover a {
       opacity: 0.5; }
 
-.text-peach {
-  color: #ffd7a1; }
-
-.text-pink {
-  color: #eb8c66; }
-
-.text-magenta {
-  color: #b86263; }
-
 .text-blue {
   color: #97ceb6; }
-
-.text-green {
-  color: #97c197; }
 
 .text-white {
   color: #fff; }
@@ -176,21 +165,6 @@ a {
   transition: .3s; }
   .fade-on-hover:hover, .logo-block:hover, a:hover, .btn:hover {
     opacity: 0.7; }
-
-.bg-peach {
-  background-color: #ffd7a1; }
-
-.bg-pink {
-  background-color: #eb8c66; }
-
-.bg-blue {
-  background-color: #97ceb6; }
-
-.bg-green {
-  background-color: #97c197; }
-
-.bg-gray {
-  background-color: #7F7F7F; }
 
 .btn {
   color: #fff;

@@ -6,14 +6,9 @@
 // Configuration
 // ----------------------------------------------------------------------------
 
-$peach: #ffd7a1;
-$pink: #eb8c66;
-$magenta: #b86263;
 $blue: #97ceb6;
-$green: #97c197;
-$brown: #c0a493;
 $white: #fff;
-$dark-white: #e5e9e9;
+$off-white: #e5e9e9;
 $gray: #7F7F7F;
 
 $icon-font-size: 2.4rem;
@@ -93,6 +88,7 @@ img {
   @extend .fade-on-hover;
   @include animation('bounce-in 2s ease-in-out');
 
+  background-color: $blue;
   position: relative;
   cursor: pointer;
   width: 60px;
@@ -204,11 +200,7 @@ img {
 // Typography
 // ----------------------------------------------------------------------------
 
-.text-peach { color: $peach; }
-.text-pink { color: $pink; }
-.text-magenta { color: $magenta; }
 .text-blue { color: $blue; }
-.text-green { color: $green; }
 .text-white { color: $white; }
 .text-gray { color: $gray; }
 
@@ -309,16 +301,6 @@ a {
 }
 
 // ----------------------------------------------------------------------------
-// Backgrounds
-// ----------------------------------------------------------------------------
-
-.bg-peach { background-color: $peach; }
-.bg-pink { background-color: $pink; }
-.bg-blue { background-color: $blue; }
-.bg-green { background-color: $green; }
-.bg-gray { background-color: $gray; }
-
-// ----------------------------------------------------------------------------
 // Buttons
 // ----------------------------------------------------------------------------
 
@@ -359,7 +341,7 @@ a {
 }
 
 @include keyframes(brighten) {
-  from { background-color: $dark-white; }
+  from { background-color: $off-white; }
   to { background-color: $white; }
 }
 
