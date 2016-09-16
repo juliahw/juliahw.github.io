@@ -169,7 +169,8 @@ a {
 .btn {
   color: #fff;
   border-radius: 20px;
-  height: 40px; }
+  height: 40px;
+  background-color: #97ceb6; }
   .btn h4 {
     position: relative;
     bottom: 10px;
