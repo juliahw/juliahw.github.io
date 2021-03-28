@@ -1,0 +1,28 @@
+image: node:12.13.0-alpine
+default: build
+tasks:
+  npm_install:
+    input_paths:
+      - package-lock.json
+      - package.json
+    command: npm install
+  build:
+    dependencies:
+      - npm_install
+    input_paths:
+      - src
+      - webpack.config.js
+    output_paths:
+      - dist
+    command: npx webpack --mode production
+  serve:
+    cache: false
+    dependencies:
+      - npm_install
+    mount_paths:
+      - src
+    input_paths:
+      - webpack.config.js
+    ports:
+      - 8080:8080
+    command: npx webpack serve --mode development --host 0.0.0.0
