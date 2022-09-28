@@ -1,13 +1,16 @@
 import React from "react";
+import Contact from "./Contact";
 
 function App() {
   return (
     <div className="container">
+      <Contact />
+
       <div className="copyright">
         <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <path
-              id="path"
+              id="copyrightPath"
               fill="none"
               stroke="white"
               transform="translate(0, 35) scale(2)"
@@ -15,7 +18,11 @@ function App() {
             />
           </defs>
           <text>
-            <textPath href="#path" startOffset="50%" textAnchor="middle">
+            <textPath
+              href="#copyrightPath"
+              startOffset="50%"
+              textAnchor="middle"
+            >
               <tspan dy="4">©2022 JULIA WANG</tspan>
             </textPath>
           </text>
